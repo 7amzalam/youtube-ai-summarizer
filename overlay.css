@@ -1,0 +1,124 @@
+/* Main Overlay Container */
+#summary-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: ltr; /* Left-to-right for consistent layout */
+}
+
+/* The Chat Window */
+#summary-content-box {
+    width: 650px;
+    max-width: 90vw;
+    height: 75vh;
+    background-color: #282A36; /* Dracula theme background */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #44475A;
+}
+
+/* Chat Header */
+#summary-header {
+    padding: 15px 20px;
+    background-color: #21222C;
+    border-bottom: 1px solid #44475A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#summary-header h3 {
+    margin: 0;
+    color: #F8F8F2; /* Dracula theme foreground */
+    font-size: 18px;
+}
+
+#summary-close-btn {
+    background: none;
+    border: none;
+    color: #F8F8F2;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Chat History Area */
+#summary-history {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    color: #F8F8F2;
+    font-size: 16px; /* Larger font size */
+    line-height: 1.6;
+}
+
+.summary-message {
+    margin-bottom: 15px;
+    padding: 12px 18px;
+    border-radius: 18px;
+    max-width: 85%;
+}
+
+.summary-message.user {
+    background-color: #44475A; /* Dracula theme comment color */
+    color: #F8F8F2;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+    margin-left: auto; /* Push to the right */
+}
+
+.summary-message.model {
+    background-color: #37394A; /* Slightly different background for AI */
+    color: #F8F8F2;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.summary-message strong {
+    color: #50FA7B; /* Dracula theme green for emphasis */
+}
+
+/* Input Area */
+#summary-input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #44475A;
+    background-color: #21222C;
+}
+
+#summary-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #44475A;
+    border-radius: 8px;
+    background-color: #37394A;
+    color: #F8F8F2;
+    font-size: 16px;
+    resize: none;
+    margin-right: 10px;
+}
+
+#summary-send-btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #BD93F9; /* Dracula theme purple */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#summary-send-btn:hover {
+    background-color: #A47DE4;
+}

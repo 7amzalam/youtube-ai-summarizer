@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Summarizer Settings</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Summarizer Settings</h2>
+
+        <label for="api-select">Choose AI Model:</label>
+        <select id="api-select">
+            <option value="gemini">Google Gemini</option>
+            <option value="openai">OpenAI (ChatGPT)</option>
+            <option value="deepseek">DeepSeek</option>
+        </select>
+        
+        <label for="language-select">Summary Language:</label>
+        <select id="language-select">
+            <option value="English">English</option>
+            <option value="Arabic">العربية</option>
+            <option value="French">Français</option>
+            <option value="Spanish">Español</option>
+        </select>
+
+        <label for="prompt">Custom Prompt:</label>
+        <textarea id="prompt" rows="3" placeholder="e.g., Summarize this in 5 bullet points."></textarea>
+
+        <hr>
+        <h3>API Keys</h3>
+        <label for="gemini-key">Gemini API Key:</label>
+        <input type="password" id="gemini-key" placeholder="Enter your Gemini API key">
+
+        <label for="openai-key">OpenAI API Key:</label>
+        <input type="password" id="openai-key" placeholder="Enter your OpenAI API key">
+
+        <label for="deepseek-key">DeepSeek API Key:</label>
+        <input type="password" id="deepseek-key" placeholder="Enter your DeepSeek API key">
+        
+        <button id="save-btn">Save Settings</button>
+        <p id="status"></p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
